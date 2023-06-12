@@ -12,178 +12,111 @@
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-4">
-                <div class="content-right">
-                    <div class="row g-0">
-                        <div class="user d-flex justify-content-between">
-                            <div class="m-2">
-                                <img src="./img/avatar_io.jpg" alt="">
-                                <span>Sofia</span>
-                            </div>
-                            <div class="m-2">
-                            <i class="fa-solid fa-circle-notch p-1"></i>
-                            <i class="fa-solid fa-message p-1"></i>
-                            <i class="fa-solid fa-ellipsis-vertical p-1"></i>
-                            </div>
-                        </div>
-                        <div class="notifications d-flex">
-                                <i class="fa-solid fa-bell-slash m-2"></i>
-                            <div>
-                                Ricevi notifiche di nuovi messaggi  <br>
-                                <a href="#">Attiva notifiche desktop</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row g-0">
-                        <div class="search-bar d-flex">
-                                <i class="fa-solid fa-magnifying-glass">
-                                    <input type="text" name="search-bar" placeholder=" Cerca o inizia una nuova chat">
-                                </i>
-                        </div>
-                    </div>
-                    <div class="row g-0">
-                        <div class="chat">
-                            <div class="d-flex">
-                                <div>
-                                    <img src="./img/avatar_1.jpg" alt="">
-                                </div>
-                                <div>
-                                    <strong>Michele</strong> <br>
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div>
-                                    <img src="./img/avatar_1.jpg" alt="">
-                                </div>
-                                <div>
-                                    <strong>Michele</strong> <br>
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div>
-                                    <img src="./img/avatar_1.jpg" alt="">
-                                </div>
-                                <div>
-                                    <strong>Michele</strong> <br>
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div>
-                                    <img src="./img/avatar_1.jpg" alt="">
-                                </div>
-                                <div>
-                                    <strong>Michele</strong> <br>
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div>
-                                    <img src="./img/avatar_1.jpg" alt="">
-                                </div>
-                                <div>
-                                    <strong>Michele</strong> <br>
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div>
-                                    <img src="./img/avatar_1.jpg" alt="">
-                                </div>
-                                <div>
-                                    <strong>Michele</strong> <br>
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div>
-                                    <img src="./img/avatar_1.jpg" alt="">
-                                </div>
-                                <div>
-                                    <strong>Michele</strong> <br>
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div class="m-b">
-                                    <img src="./img/avatar_1.jpg" alt="">
-                                </div>
-                                <div>
-                                    <strong>Michele</strong> <br>
-                                    Ultimo messaggio inviato
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-8">
-                <div class="content-left">
-                    <div class="row g-0">
-                        <div class="user-chat">
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex">
-                                    <div>
-                                        <img src="./img/avatar_1.jpg" alt="">
-                                    </div>
-                                    <div>
-                                        <strong>Michele</strong> <br>
-                                        Ultimo accesso oggi alle 12:00
-                                    </div>
+    <div id="app">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-4">
+                    <div class="content-right">
+                        <div class="row g-0">
+                            <div class="user d-flex justify-content-between">
+                                <div class="m-2">
+                                    <img src="./img/avatar_io.jpg" alt="">
+                                    <span>Sofia</span>
                                 </div>
                                 <div class="m-2">
-                                    <i class="fa-solid fa-magnifying-glass p-1"></i>
-                                    <i class="fa-solid fa-paperclip p-1"></i>
-                                    <i class="fa-solid fa-ellipsis-vertical p-1"></i>
+                                <i class="fa-solid fa-circle-notch p-1"></i>
+                                <i class="fa-solid fa-message p-1"></i>
+                                <i class="fa-solid fa-ellipsis-vertical p-1"></i>
+                                </div>
+                            </div>
+                            <div class="notifications d-flex">
+                                    <i class="fa-solid fa-bell-slash m-2"></i>
+                                <div>
+                                    Ricevi notifiche di nuovi messaggi  <br>
+                                    <a href="#">Attiva notifiche desktop</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="search-bar d-flex">
+                                    <i class="fa-solid fa-magnifying-glass">
+                                        <input type="text" name="search-bar" placeholder=" Cerca o inizia una nuova chat">
+                                    </i>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="chat">
+                                <div v-for="(contact,index) in contacts" class="d-flex border">
+                                    <div class="m-2">
+                                        <img :src="contact.avatar" alt="">
+                                    </div>
+                                    <div class="m-2">
+                                        <strong>{{contact.name}}</strong> <br>
+                                        Ultimo messaggio inviato
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row g-0">
-                        <div class="content-chat">
-                            <div class="back d-flex justify-content-evenly">
-                                <div class="white">
-                                    Tutto fatto!
+                </div>
+                <div class="col-8">
+                    <div class="content-left">
+                        <div class="row g-0">
+                            <div class="user-chat">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex">
+                                        <div>
+                                            <img src="./img/avatar_1.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <strong>Michele</strong> <br>
+                                            Ultimo accesso oggi alle 12:00
+                                        </div>
+                                    </div>
+                                    <div class="m-2">
+                                        <i class="fa-solid fa-magnifying-glass p-1"></i>
+                                        <i class="fa-solid fa-paperclip p-1"></i>
+                                        <i class="fa-solid fa-ellipsis-vertical p-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="content-chat">
+                                <div class="back d-flex justify-content-evenly">
+                                    <div class="white">
+                                        Tutto fatto!
+                                    </div>
+                                    <div>
+                                        <div class="green m-2">
+                                            Hai portato a spasso il cane?
+                                        </div>
+                                        <div class="green m-2">
+                                            Ricordati di standere i panni
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="input-bar d-flex justify-content-between">
+                                <div>
+                                    <i class="fa-regular fa-face-smile m-3"></i>
                                 </div>
                                 <div>
-                                    <div class="green m-2">
-                                        Hai portato a spasso il cane?
-                                    </div>
-                                    <div class="green m-2">
-                                        Ricordati di standere i panni
-                                    </div>
+                                    <input type="text" class="m-1" placeholder="Scrivi un messaggio">
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row g-0">
-                        <div class="input-bar d-flex justify-content-between">
-                            <div>
-                                <i class="fa-regular fa-face-smile m-3"></i>
-                            </div>
-                            <div>
-                                <input type="text" class="m-1" placeholder="Scrivi un messaggio">
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-microphone m-3"></i>
+                                <div>
+                                    <i class="fa-solid fa-microphone m-3"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-      </div>
-    <script type="text/javascript" src="./JS/script.js"></script>
+          </div>
+    </div>
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <script type="text/javascript" src="./JS/script.js"></script>
 </body>
 </html>

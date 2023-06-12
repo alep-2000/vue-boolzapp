@@ -94,11 +94,12 @@ input::placeholder{
 /* CHAT */
 .chat{
     width: 100%;
+    height: 589px;
     background-color: white;
 }
 
-.chat img, .user-chat img{
-    width: 40px;
+.chat img{
+    width: 50px;
     border-radius: 50%;
     margin: 0 5px 0 13px;
 }
@@ -116,8 +117,18 @@ input::placeholder{
 .chat .m-b{
     margin-bottom: 40px;
 }
+
+.border{
+    border-bottom: 1px solid rgb(196, 192, 192);
+}
 /* END CHAT */
 /* USER-CHAT */
+.user-chat img{
+    width: 35px;
+    border-radius: 50%;
+    margin: 0 5px 0 13px;
+}
+
 .user-chat .fa-magnifying-glass, .fa-paperclip, .fa-ellipsis-vertical{
     font-size: 15px;
     color: #B1B1B1;
@@ -138,8 +149,8 @@ input::placeholder{
 .content-chat .white{
     background-color: white;
     width: 200px;
-    font-size: 12px;
-    padding: 5px;
+    font-size: 10px;
+    padding: 10px;
     border-radius: 5px;
     margin-top: 100px;
 }
@@ -147,8 +158,8 @@ input::placeholder{
 .content-chat .green{
     background-color: #D5F9BA;
     width: 200px;
-    font-size: 12px;
-    padding: 5px;
+    font-size: 10px;
+    padding: 10px;
     border-radius: 5px;
 }
 /* END CONTENT-CHAT */
