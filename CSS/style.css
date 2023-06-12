@@ -20,6 +20,7 @@ body{
     background-color: red;
 }
 
+/* SECTION USER */
 .user, .user-chat{
     width: 100%;
     height: 40px;
@@ -36,6 +37,11 @@ body{
     font-size: 12px;
 }
 
+.user .fa-circle-notch, .fa-message, .fa-ellipsis-vertical{
+    color: #B1B1B1;
+}
+/* END SECTION USER */
+/* NOTIFICATIONS */
 .notifications{
     width: 100%;
     background-color: #8EDAFC;
@@ -57,13 +63,14 @@ body{
     font-size: 9px;
     color: grey;
 }
-
+/* END NOTIFICATIONS */
+/* SEARCH-BAR */
 .search-bar{
     width: 100%;
     background-color: white;
 }
 
-.fa-magnifying-glass{
+.search-bar .fa-magnifying-glass{
     margin: 4px 0 4px 5px;
     padding: 5px 3px;
     width: 97%;
@@ -83,39 +90,84 @@ input::placeholder{
     font-family: 'Open Sans', sans-serif;
     color: #B1B1B1;
 }
-
+/* END SEARCH-BAR */
+/* CHAT */
 .chat{
     width: 100%;
-    height: 570px;
     background-color: white;
 }
 
-.chat img{
+.chat img, .user-chat img{
     width: 40px;
     border-radius: 50%;
     margin: 0 5px 0 13px;
 }
 
-.chat strong{
+.chat strong, .user-chat strong{
     font-size: 14px;
+    color: black;
 }
 
-.chat div{
+.chat div, .user-chat div{
     font-size: 9px;
-}
-
-.content-chat{
-    width: 100%;
-    height: 600px;
-    background-color: brown;
-}
-
-.input-bar{
-    width: 100%;
-    height: 50px;
-    background-color: violet;
-}
-
-.fa-circle-notch, .fa-message, .fa-ellipsis-vertical{
     color: #B1B1B1;
 }
+
+.chat .m-b{
+    margin-bottom: 40px;
+}
+/* END CHAT */
+/* USER-CHAT */
+.user-chat .fa-magnifying-glass, .fa-paperclip, .fa-ellipsis-vertical{
+    font-size: 15px;
+    color: #B1B1B1;
+}
+/* END USER-CHAT */
+/* CONTENT-CHAT */
+.content-chat{
+    width: 100%;
+    height: 625px;
+    background-image: url('../img/mine.jpg');
+}
+
+.content-chat .back{
+    width: 100%;
+    margin:30px auto;
+}
+
+.content-chat .white{
+    background-color: white;
+    width: 200px;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+.content-chat .green{
+    background-color: #D5F9BA;
+    width: 200px;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+}
+/* END CONTENT-CHAT */
+/* INPUT-BAR */
+.input-bar{
+    width: 100%;
+    background-color: #F3EEEA;
+}
+
+.input-bar input{
+    width: 750px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.fa-face-smile, .fa-microphone{
+    color: #B1B1B1;
+}
+/* END INPUT BAR */
+
+
+
