@@ -46,7 +46,7 @@
                         </div>
                         <div class="row g-0">
                             <div class="chat">
-                                <div v-for="(contact,index) in contacts" class="d-flex border">
+                                <div v-for="(contact,index) in contacts" class="d-flex border" @click="active_chat (index)">
                                     <div class="m-2">
                                         <img :src="contact.avatar" alt="">
                                     </div>
@@ -83,22 +83,22 @@
                         </div>
                         <div class="row g-0">
                             <div class="content-chat">
-                                <div v-for="messa in messagges" class="back d-flex justify-content-evenly">
+                                <div v-for="(contact,index) in contacts" class="back d-flex justify-content-evenly">
                                     <div class="white">
-                                        {{contacts.messages[0].message}}
+                                        {{contacts[contactActive].messages[messageActive].message}}
                                         <div class="date">
                                             16:15
                                         </div>
                                     </div>
                                     <div>
                                         <div class="green m-2">
-                                            Hai portato a spasso il cane?
+                                            {{contacts[contactActive].messages[messageActive].message}}
                                             <div class="date">
                                                 15:30
                                             </div>
                                         </div>
                                         <div class="green m-2">
-                                            Ricordati di standere i panni
+                                            {{contacts[contactActive].messages[messageActive].message}}
                                             <div class="date">
                                                 15:50
                                             </div>

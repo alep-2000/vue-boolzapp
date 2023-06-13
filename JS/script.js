@@ -172,5 +172,10 @@ createApp({
             ]
             
         }
-    }
+    },
+    methods: {
+        active_chat(index){
+            this.contactActive = index
+        }
+    },
 }).mount('#app');
