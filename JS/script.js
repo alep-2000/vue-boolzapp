@@ -6,6 +6,7 @@ createApp({
     data(){
         return{
             contactActive: 0,
+            messageActive: 0,
             contacts: [
                 {
                     name: 'Michele',

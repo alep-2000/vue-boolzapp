@@ -83,9 +83,9 @@
                         </div>
                         <div class="row g-0">
                             <div class="content-chat">
-                                <div class="back d-flex justify-content-evenly">
+                                <div v-for="messa in messagges" class="back d-flex justify-content-evenly">
                                     <div class="white">
-                                        Tutto fatto!
+                                        {{contacts.messages[0].message}}
                                         <div class="date">
                                             16:15
                                         </div>
