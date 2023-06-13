@@ -20,3 +20,18 @@ SOLUZIONE:
 2 - Creare un evento al click richiamando una funzione;
     2.1 - Creare la funzione;
 
+
+PROBLEMA:
+Milestone 3
+●	Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+●	Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+
+SOLUZIONE:
+1 - Aggiungere un v-model per attivare l'input;
+2 - Creare una funzione;
+    2.1 - Creare un oggetto;
+    2.2 - Pushare l'oggetto
+    2.3 - Visualizzare nella chat il nuovo messaggio;
+3 - Creare una funzione;
+    3.1 - Creare un set Timeout;
+    3.2 - Aggiunger una risposta automatica;
