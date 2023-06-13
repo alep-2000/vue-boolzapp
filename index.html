@@ -66,10 +66,10 @@
                                 <div class="d-flex justify-content-between">
                                     <div class="d-flex">
                                         <div>
-                                            <img src="./img/avatar_1.jpg" alt="">
+                                            <img :src="contacts[contactActive].avatar" alt="">
                                         </div>
                                         <div>
-                                            <strong>Michele</strong> <br>
+                                            <strong> {{contacts[contactActive].name}} </strong> <br>
                                             Ultimo accesso oggi alle 12:00
                                         </div>
                                     </div>
@@ -86,13 +86,22 @@
                                 <div class="back d-flex justify-content-evenly">
                                     <div class="white">
                                         Tutto fatto!
+                                        <div class="date">
+                                            16:15
+                                        </div>
                                     </div>
                                     <div>
                                         <div class="green m-2">
                                             Hai portato a spasso il cane?
+                                            <div class="date">
+                                                15:30
+                                            </div>
                                         </div>
                                         <div class="green m-2">
                                             Ricordati di standere i panni
+                                            <div class="date">
+                                                15:50
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
