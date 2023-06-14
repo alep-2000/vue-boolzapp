@@ -169,7 +169,8 @@ createApp({
                     ],
                 }
             ],
-            new_message: ''
+            new_message: '',
+            search: ''
         }
     },
     methods: {
@@ -177,8 +178,7 @@ createApp({
             this.contactActive = index
         },
         add_message(){
-            
-             this.contacts[this.contactActive].messages.push({
+                this.contacts[this.contactActive].messages.push({
                 date: '10/01/2020 15:51:00',
                 message: this.new_message,
                 status: 'sent'
@@ -194,9 +194,21 @@ createApp({
                 }
 
                 this.contacts[this.contactActive].messages.push(obj)
-                
-            },1000)
 
+            },1000)
+        },
+        search_contact(){
+            let search_active = this.search.toLowerCase();
+
+            for(let i=0; i < this.contacts.length; i++){
+                let contact = this.contacts[i]
+                if(contact.name.toLowerCase().includes(search_active)){
+                    contact.visible = true
+                }
+                else{
+                    contact.visible = false
+                }
+            }
         }
-    },
+    }
 }).mount('#app');

@@ -83,6 +83,7 @@ body{
 input{
     border: none;
     width: 92%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 input::placeholder{

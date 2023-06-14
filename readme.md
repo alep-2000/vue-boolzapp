@@ -41,3 +41,19 @@ SOLUZIONE:
     3.6 - Creare un oggetto;
     3.7 . Pushare il nuovo oggetto;
     3.8 - Visualizzare la risposta automatica;
+
+PROBLEMA:
+Milestone 4
+●	Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+
+
+SOLUZIONE:
+1 - Aggiungere il v-model all'input;
+2 - Aggiungere un evento input dove richiamo una funzione;
+3 - Aggiungo un binding di classe per utilizzare la proprietà visible;
+4 - Creo la funzione;
+    4.1 - Ciclo l'array dei contatti;
+    4.2 - Creo una variabile contacts[i];
+    4.3 - Creo una condizione;
+        4.3.1 - ? SE nell'array dei contatti, nella proprietà nome, è incluso ciò che scrivo, imposta la proprietà visibile a true;
+        4.3.2 - : ALTRIMENTI imposta la proprietà visible a false;
