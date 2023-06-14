@@ -176,14 +176,17 @@ createApp({
         active_chat(index){
             this.contactActive = index
         },
-        new_messages(index){
-            let obj= {
-                date: '10/01/2020 15:51:00',
-                message: this.new_messages,
-                status: 'received'
-            }
+        add_message(){
 
-            this.contactActive.this.messages.push(obj)
+            const contact = this.contacts[this.contactActive]
+
+            contact.messagges.push({
+                date: '10/01/2020 15:51:00',
+                message: this.new_message,
+                status: 'sent'
+            })
+
+            
         }
     },
 }).mount('#app');
