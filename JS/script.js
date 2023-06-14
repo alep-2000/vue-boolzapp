@@ -169,13 +169,22 @@ createApp({
                         }
                     ],
                 }
-            ]
-            
+            ],
+            new_message: ''
         }
     },
     methods: {
         active_chat(index){
             this.contactActive = index
+        },
+        new_messages(index){
+            let obj= {
+                date: '10/01/2020 15:51:00',
+                message: this.new_messages,
+                status: 'received'
+            }
+
+            this.contactActive.this.messages.push(obj)
         }
     },
 }).mount('#app');
