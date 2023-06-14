@@ -83,19 +83,14 @@
                         </div>
                         <div class="row g-0">
                             <div class="content-chat">
-                                <div v-for="(message,index) in messages" class="back d-flex justify-content-evenly">
-                                    <div class="white">
-                                        {{contacts[contactActive].messages[messageActive].message}}
+                                <div v-for="message in contacts[contactActive].messages" class="back">
+                                    <div :class="message.status === 'received' ? 'white' : 'green' ">
+                                        {{message.message}}
                                         <div class="date">
                                             16:15
                                         </div>
                                     </div>
-                                    <div class="green">
-                                        {{contacts[contactActive].messages[messageActive].message}}
-                                        <div class="date">
-                                            16:15
-                                        </div>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>

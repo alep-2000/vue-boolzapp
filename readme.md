@@ -17,6 +17,9 @@ Milestone 2
 
 SOLUZIONE:
 1 - Creare un ciclo v-for per mostrare dinamicamente i messaggi;
+    1.1 - Utilizzare il v-binding di classe con una condizione;
+    1.2 - ? SE lo status è = a 'received', assegna la classe white;
+    1.3 - : ALTRIMENTI assegna la classe green; 
 2 - Creare un evento al click richiamando una funzione;
     2.1 - Creare la funzione;
 
