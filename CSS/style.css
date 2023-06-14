@@ -139,7 +139,6 @@ input::placeholder{
     width: 100%;
     height: 625px;
     background-image: url('../img/mine.jpg');
-    /* position: relative; */
 }
 
 .back{
@@ -148,29 +147,31 @@ input::placeholder{
 }
 
 .white{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.inner-white{
     background-color: white;
     width: 200px;
     font-size: 10px;
     padding: 10px;
     border-radius: 5px;
     position: relative;
-    /* position: absolute; */
-    /* top: 5%;
-    left: 0%;
-    transform: translate(-0%, 5%); */ 
 }
 
-.green{
+.green{    
+    display: flex;
+    justify-content: flex-end;
+}
+
+.inner-green{
     background-color: #D5F9BA;
     width: 200px;
     font-size: 10px;
     padding: 10px;
     border-radius: 5px;
     position: relative;
-    /* position: absolute;  */
-    /* right: 0%;
-    top: 40%;
-    transform: translate(-0%, 40%); */ 
 }
 
 .right{

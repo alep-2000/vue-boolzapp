@@ -31,10 +31,13 @@ Milestone 3
 
 SOLUZIONE:
 1 - Aggiungere un v-model per attivare l'input;
-2 - Creare una funzione;
-    2.1 - Creare un oggetto;
-    2.2 - Pushare l'oggetto
-    2.3 - Visualizzare nella chat il nuovo messaggio;
+2 - Aggiungere un evento keyup.enter in cui richiamo una funzione;
 3 - Creare una funzione;
-    3.1 - Creare un set Timeout;
-    3.2 - Aggiunger una risposta automatica;
+    3.1 - Creare un oggetto;
+    3.2 - Pushare l'oggetto
+    3.3 - Visualizzare nella chat il nuovo messaggio;
+    3.4 - Svuotare l'input;
+    3.5 - Creare un set Timeout;
+    3.6 - Creare un oggetto;
+    3.7 . Pushare il nuovo oggetto;
+    3.8 - Visualizzare la risposta automatica;

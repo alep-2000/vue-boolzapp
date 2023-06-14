@@ -83,16 +83,13 @@
                         </div>
                         <div class="row g-0">
                             <div class="content-chat">
-                                <div v-for="message in contacts[contactActive].messages" class="back">
-                                    <div :class="message.status === 'received' ? 'white' : 'green' ">
+                                <div v-for="message in contacts[contactActive].messages" class="back" :class="message.status === 'received' ? 'white' : 'green' ">
+                                    <div :class="message.status === 'received' ? 'inner-white' : 'inner-green' ">
                                         {{message.message}}
                                         <div class="date">
                                             16:15
                                         </div>
                                     </div>
-                                </div>
-                                <div class="green">
-                                    {{new_message}}
                                 </div>
                             </div>
                         </div>

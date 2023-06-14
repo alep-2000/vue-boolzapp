@@ -177,16 +177,26 @@ createApp({
             this.contactActive = index
         },
         add_message(){
-
-            const contact = this.contacts[this.contactActive]
-
-            contact.messagges.push({
+            
+             this.contacts[this.contactActive].messages.push({
                 date: '10/01/2020 15:51:00',
                 message: this.new_message,
                 status: 'sent'
             })
 
-            
+            this.new_message = '';
+
+            setTimeout(() => {
+                let obj = {
+                    date: '10/01/2020 15:51:00',
+                    message: 'Ok',
+                    status: 'received'
+                }
+
+                this.contacts[this.contactActive].messages.push(obj)
+                
+            },1000)
+
         }
     },
 }).mount('#app');
