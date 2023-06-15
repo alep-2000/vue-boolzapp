@@ -13,11 +13,15 @@
 </head>
 <body>
     <div id="app">
+        <!-- CONTAINER -->
         <div class="container">
+            <!-- ROW -->
             <div class="row g-0">
                 <div class="col-4">
+                    <!-- COL-4 -->
                     <div class="content-right">
                         <div class="row g-0">
+                            <!-- SECTION USER -->
                             <div class="user d-flex justify-content-between">
                                 <div class="m-2">
                                     <img src="./img/avatar_io.jpg" alt="">
@@ -29,6 +33,8 @@
                                 <i class="fa-solid fa-ellipsis-vertical p-1"></i>
                                 </div>
                             </div>
+                            <!-- END SECTION USER -->
+                            <!-- SECTION NOTIFICATIONS -->
                             <div class="notifications d-flex">
                                     <i class="fa-solid fa-bell-slash m-2"></i>
                                 <div>
@@ -37,16 +43,20 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- END SECTION NOTIFICATIONS -->
                         <div class="row g-0">
+                            <!-- SECTION SEARCH-BAR -->
                             <div class="search-bar d-flex">
                                     <i class="fa-solid fa-magnifying-glass">
                                         <input type="text" name="search-bar" placeholder=" Cerca o inizia una nuova chat" v-model="search" @input="search_contact">
                                     </i>
                             </div>
                         </div>
+                        <!-- END SECTION SEARCH-BAR -->
                         <div class="row g-0">
+                            <!-- SECTION CHAT -->
                             <div class="chat">
-                                <div v-for="(contact,index) in contacts" :class="contact.visible ? 'd-block' : 'd-none'" class="d-flex border" @click="active_chat (index)">
+                                <div v-for="(contact,index) in contacts" :class="contact.visible ? 'd-block' : 'd-none'" class="d-flex border over" @click="active_chat (index)">
                                     <div class="m-2">
                                         <img :src="contact.avatar" alt="">
                                     </div>
@@ -59,9 +69,12 @@
                         </div>
                     </div>
                 </div>
+                <!-- END SECTION CHAT -->
+                <!-- COL-8 -->
                 <div class="col-8">
                     <div class="content-left">
                         <div class="row g-0">
+                            <!-- SECTION USER-CHAT -->
                             <div class="user-chat">
                                 <div class="d-flex justify-content-between">
                                     <div class="d-flex">
@@ -81,7 +94,9 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- END SECTION USER-CHAT -->
                         <div class="row g-0">
+                            <!-- SECTION CONTENT-CHAT -->
                             <div class="content-chat">
                                 <div v-for="message in contacts[contactActive].messages" class="back" :class="message.status === 'received' ? 'white' : 'green' ">
                                     <div :class="message.status === 'received' ? 'inner-white' : 'inner-green' ">
@@ -93,7 +108,9 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- END SECTION CONTENT-CHAT -->
                         <div class="row g-0">
+                            <!-- INPUT-BAR -->
                             <div class="input-bar d-flex justify-content-between">
                                 <div>
                                     <i class="fa-regular fa-face-smile m-3"></i>
@@ -106,6 +123,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- END SECTION INPUT-BAR -->
                     </div>
                 </div>
             </div>

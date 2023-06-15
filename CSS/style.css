@@ -118,6 +118,10 @@ input::placeholder{
 .border{
     border-bottom: 1px solid rgb(196, 192, 192);
 }
+
+.over:hover{
+    background-color: #EAEAEA;
+}
 /* END CHAT */
 /* USER-CHAT */
 .user-chat img{
