@@ -5,7 +5,9 @@ const {createApp} = Vue
 createApp({
     data(){
         return{
+            // VARIABLE TO CONTACT ACTIVE
             contactActive: 0,
+            // ARRAY CONTACTS
             contacts: [
                 {
                     name: 'Michele',
@@ -174,9 +176,11 @@ createApp({
         }
     },
     methods: {
+        // FUNCTION TO VIEW ACTIVE CHAT
         active_chat(index){
             this.contactActive = index
         },
+        // FUNCTION TO ADD A NEW-MESSAGE
         add_message(){
                 this.contacts[this.contactActive].messages.push({
                 date: '10/01/2020 15:51:00',
@@ -185,7 +189,7 @@ createApp({
             })
 
             this.new_message = '';
-
+            // METHODS TO ADD AUTOMATIC ANSWER
             setTimeout(() => {
                 let obj = {
                     date: '10/01/2020 15:51:00',
@@ -197,9 +201,10 @@ createApp({
 
             },1000)
         },
+        // FUNCTION TO SEARCH A CONTACT
         search_contact(){
             let search_active = this.search.toLowerCase();
-
+            // CICLE FOR
             for(let i=0; i < this.contacts.length; i++){
                 let contact = this.contacts[i]
                 if(contact.name.toLowerCase().includes(search_active)){
